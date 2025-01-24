@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <!-- Meta(Keywords, description, robots...) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="yescards, vente de yescards">
+    <meta name="description" content="La plateforme Card Skimming s'engage à vous fournir une expérience agréable et dynamique lors de l'acquisition de vos Yescards.">
+    <meta name="robots" content="index,follow">
+
+    <!-- SCSS files -->
+    <link rel="stylesheet" href="lib/animate.css">
+    <link rel="stylesheet" href="lib/tailwind.css">
+    <link rel="stylesheet" href="lib/animate.css">
+    <link rel="stylesheet" href="scss/var.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="scss/import.css">
+    <script src="lib/jquery.js"></script>
+    <script>
+        $("#menu").click(function () {
+            $("menu_list").toggle(); 
+        });
+    </script>
+    <link rel="stylesheet" href="scss/components.scss">
+    <link rel="shortcut icon" href="assets/icons/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script src="lib/jquery.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+    <script type="module">
+        import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+
+        const keenSlider = new KeenSlider(
+            '#keen-slider',
+            {
+            loop: true,
+            slides: {
+                origin: 'center',
+                perView: 1.25,
+                spacing: 16,
+            },
+            breakpoints: {
+                '(min-width: 1024px)': {
+                slides: {
+                    origin: 'auto',
+                    perView: 1.5,
+                    spacing: 32,
+                },
+                },
+            },
+            },
+            []
+        )
+
+        const keenSliderPrevious = document.getElementById('keen-slider-previous')
+        const keenSliderNext = document.getElementById('keen-slider-next')
+
+        const keenSliderPreviousDesktop = document.getElementById('keen-slider-previous-desktop')
+        const keenSliderNextDesktop = document.getElementById('keen-slider-next-desktop')
+
+        keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+        keenSliderNext.addEventListener('click', () => keenSlider.next())
+
+        keenSliderPreviousDesktop.addEventListener('click', () => keenSlider.prev())
+        keenSliderNextDesktop.addEventListener('click', () => keenSlider.next())
+    </script>
+    <script>
+        $("#menu").click(function () {
+            $("menu_list").toggle(); 
+        });
+    </script>   
+    
+    <!-- Title of page -->
+    <title>Ventes des billets</title>
+</head>
+<style>
+    body 
+    {
+        background-image: linear-gradient(rgba(81, 15, 132, 0.933), rgba(0, 0, 0, 0.947));
+        font-family: Figtree;
+    }
+    #category_card
+    {
+        cursor: pointer;
+        transition: all 0.5s ease-in 0s;
+    }
+    #category_card:hover
+    {
+        transform: translateY(10px);
+    }
+</style>
+<body class="h-full">
+    <!-- Navigation -->
+    <div class="flex flex-wrap justify-around p-10">
+        <nav class="border border-gray-100 fixed w-[400px] sm:w-[1200px] top-6 rounded-full bg-white" id="nav" style="z-index:1000;"> 
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="index.html" class="flex items-center gap-1 align-middle">
+                    <img src="assets/icons/logo.png" height="40" width="40">
+                </a>
+                <div class="flex md:order-2">
+                    <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 rounded-none text-sm p-2.5 mr-1">
+                        <svg class="w-5 h-5" aria-hidden="true" fill="#fff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div class="relative hidden mr-4 md:flex gap-8 align-middle items-center" id="menu_list">
+                        <a href="bank.html" class="text-black hover:text-green-500">
+                            Commander des Faux billets
+                        </a>
+                        <a href="card.html" class="text-black hover:text-green-500">
+                            Acheter des YESCARDS
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+33650828424" class="text-black hover:text-green-500">
+                            <img src="assets/icons/whatsapp.png" height="30" width="30">
+                        </a>
+                        <a href="#">
+                            <div class="gtranslate_wrapper"></div>
+                        </a>
+                    </div>
+                    <div class="relative hidden md:block">
+                        <?html include('components/button-bg.html') ?>
+                    </div>
+                    <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 gap-3 text-sm text-gray-500 rounded-none md:hidden" aria-controls="navbar-search" aria-expanded="false">
+                        <a href="https://api.whatsapp.com/send?phone=+33751172676" class="text-black hover:text-green-500">
+                            <img src="assets/icons/whatsapp.png" height="30" width="30">
+                        </a>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="menu_list">
+                    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium font-bold md:flex-row md:space-x-8 md:mt-0">
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="flex flex-wrap justify-around pt-10" id="price_grid" style="padding-bottom:80px;">
+        <div class="text-center text-gray-800 py-20 px-6 bg-transparent">
+            <h1 class="max-w-4xl text-white text-center mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl">Découvrir nos classes de billets avec tarification</h1>
+        </div>
+        <div class="grid grid-cols-1 gap-2 lg:grid-cols-2 lg:gap-8 -mt-10 sm:mt-0" id="show">
+            <div class="w-auto sm:mt-auto mt-6 p-8 shadow-lg rounded-lg border border-gray-300">
+                <p class="text-4xl font-bold flex align-middle items-center" id="price">
+                    <b class="text-white font-extrabold">Classe A</b>
+                </p>
+                <ul class="w-full mt-6 mb-6 text-lg text-gray-200">
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix : 400€ ➡️ 10000€ de retrait
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix : 500 € ➡️ 12000€ de retrait
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix : 600 € ➡️ 14000€ de retrait 
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix :700€ ➡️ 18000€ de retrait
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix :800€ ➡️ 25000€ de retrait
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix :900€ ➡️ 28000€ de retrait
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix :1000€ ➡️ 30000€ de retrait
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix :1500€ ➡️ 38000€ de retrait
+                    </li>
+                </ul>
+                <a href="https://wa.me/+33650828424" class="mt-8 inline-block rounded-full w-full px-12 py-3 text-sm text-center font-medium text-white transition hover:shadow-lg focus:outline-none focus:ring" style="background-color:var(--color);">
+                    Commander des billets
+                </a>
+            </div>
+            <div class="w-auto sm:mt-auto mt-6 p-8 shadow-lg rounded-lg border border-gray-300">
+                <p class="text-4xl font-bold flex align-middle items-center" id="price">
+                    <b class="text-white font-extrabold">Classe AA+</b>
+                </p>
+                <ul class="w-full mt-6 mb-6 text-lg text-gray-200">
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix : 450€ ➡️ 12000€ de retrait
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix : 550 € ➡️ 16000€ de retrait
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix : 650 € ➡️ 20000€ de retrait 
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix :750€ ➡️ 25000€ de retrait
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix :850€ ➡️ 30000€ de retrait
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix :950€ ➡️ 35000€ de retrait
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix :1200€ ➡️ 40000€ de retrait
+                    </li>
+                    <li class="mb-3 flex items-center ">
+                        <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6"
+                            stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                            </path>
+                        </svg>
+                        Prix :1500€ ➡️ 45000€ de retrait
+                    </li>
+                </ul>
+                <a href="https://wa.me/+33650828424/" class="mt-8 inline-block rounded-full w-full px-12 py-3 text-sm text-center font-medium text-white transition hover:shadow-lg focus:outline-none focus:ring" style="background-color:var(--color);">
+                    Commander des billets
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap justify-around" id="video" style="padding-bottom:50px;">
+        <div class="flex flex-wrap gap-6 justify-center">
+            <div class="block">
+                <h2 class="leading-none text-center text-white sm:text-left font-extrabold text-3xl sm:text-6xl">La récente commande <br> de billets d'un <br> d'un client venant de la<br> Suisse</h2>
+            </div>
+            <video controls autoplay="true" style="border-radius:10px;height:70vh;width:500px;">
+                <source src="video/MONEY.mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- Pay -->
+    <div class="flex flex-wrap align-middle items-center justify-around bg-gray-200 p-8">
+        <div class="flex flex-center justify-center">
+            <h1 class="font-extrabold text-center text-black text-2xl sm:text-3xl">
+                Nos moyens de paiements
+            </h1>
+        </div>
+        <br>
+        <div class="flex flex-wrap justify-center gap-6">
+            <img src="assets/icons/bitcoin.png" height="100" width="100">
+            <img src="assets/assets/img/transcash.png" height="100" width="200">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-20" style="border-top: 0.7px solid #ddd;">
+        <div class="mx-auto w-full max-w-screen-xl">
+        <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-white uppercase">Warrior Card</h2>
+                <ul class="text-gray-300">
+                    <li class="mb-4">
+                        <a href="#" class=" hover:underline">Qui sommes-nous?</a>
+                    </li>
+                    <!-- <li class="mb-4">
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=2JJUKQDM24UE2" class="hover:underline">Faire un don</a>
+                    </li> -->
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Faire un don</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="bank.html" class="hover:underline">Faux billets</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="card.html" class="hover:underline">YESCARDS</a>
+                    </li>
+                    <li>
+                        <div class="gtranslate_wrapper"></div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-white uppercase">Centre d'aide</h2>
+                <ul class="text-gray-300">
+                    <li class="mb-4">
+                        <a href="" class="hover:underline">Forum</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">FAQ</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-white uppercase">Légalité</h2>
+                <ul class="text-gray-300">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Mentions légales</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">CGU</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Termes &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-white uppercase">Télécharger</h2>
+                <ul class="text-gray-300">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">iOS</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Android</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="justify-between px-4 py-6 bg-black md:flex md:items-center md:justify-between" style="border-top:0.7px solid #ddd">
+            <span class="text-sm text-gray-200 sm:text-center">© 2025 <a href="https://warriorcard.vercel.app/">Warrior Card</a>. Tous droits reservés.
+            </span>
+            <div class="flex mt-4 space-x-5 sm:justify-center md:mt-0">
+                <a href="https://api.whatsapp.com/send?phone=+33650828424" class="text-black">
+                    <img src="assets/icons/whatsapp.png" height="32" width="32">
+                </a>
+                <a href="mailto:w4836240@gmail.com" class="text-black">
+                    <img src="assets/icons/gmail.png" height="32" width="32">
+                </a>
+            </div>
+        </div>
+        </div>
+    </footer>
+    
+        <!-- JS files -->
+        <script src="src/js/app.js"></script>
+        <script src="src/js/form.js"></script>
+        <script src="src/js/loader.js"></script>
+        <script src="lib/vue.js"></script>
+        <script src="lib/jquery-3.6.0.min.js"></script>
+        <script>
+            window.gtranslateSettings = {"default_language":"fr","languages":["fr","de","it","es","en"],"wrapper_selector":".gtranslate_wrapper","flag_style":"3d"}
+        </script>
+        <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+</body>
+</html>
