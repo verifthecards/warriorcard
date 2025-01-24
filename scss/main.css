@@ -1,0 +1,23 @@
+*::-moz-selection {
+  background-color: var(--color);
+  color: #fff;
+}
+
+*::selection {
+  background-color: var(--color);
+  color: #fff;
+}
+
+html,
+body {
+  background-color: #fff;
+  font-family: var(--font);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: rgba(14, 14, 14, 0.9333333333);
+}
+
+#banner {
+  background: radial-gradient(circle at 50% 120%, #510f84, rgb(248, 248, 248) 50%);
+}/*# sourceMappingURL=main.css.map */

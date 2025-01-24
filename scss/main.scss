@@ -1,0 +1,18 @@
+*::selection
+{
+    background-color: var(--color);
+    color: #fff;
+}
+html,
+body {
+    background-color: #fff;
+    font-family: var(--font);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #0e0e0eee;
+}
+
+#banner {
+    background: radial-gradient(circle at 50% 120%, #510f84, rgb(248, 248, 248) 50%);
+}
